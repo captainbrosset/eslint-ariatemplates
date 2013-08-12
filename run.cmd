@@ -1,0 +1,1 @@
+eslint  -c .\conf\eslint.json --rulesdir .\lib\rules ..\..\Java\workspace\SEPL-0.17\webapps\ui\seplui\src\main\webapp\static\app\seplui\
