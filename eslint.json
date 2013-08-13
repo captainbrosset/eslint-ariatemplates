@@ -9,6 +9,8 @@
         "controller-public-interface" : 2,
         "no-misspelled-class-properties" : 1,
         "declared-aria-dependencies" : 2,
-        "destroy-own-instances" : 2
+        "destroy-own-instances" : 2,
+        "no-duplicate-class-properties" : 2,
+        "no-duplicate-methods" : 2
     }
 }
