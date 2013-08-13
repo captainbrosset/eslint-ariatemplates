@@ -6,6 +6,7 @@
         "nb-of-lines" : [1, 400],
         "super-constructor-call" : 2,
         "controller-public-interface" : 2,
-        "no-misspelled-class-properties" : 1
+        "no-misspelled-class-properties" : 1,
+        "declared-aria-dependencies" : 2
     }
 }
