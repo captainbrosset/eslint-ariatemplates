@@ -2,11 +2,13 @@
     "rules": {
         "no-unused-static" : 1,
         "no-unused-dependency" : 2,
+        "no-unused-event" : 2,
         "no-duplicate-classes" : 2,
         "nb-of-lines" : [1, 400],
         "super-constructor-call" : 2,
         "controller-public-interface" : 2,
         "no-misspelled-class-properties" : 1,
-        "declared-aria-dependencies" : 2
+        "declared-aria-dependencies" : 2,
+        "destroy-own-instances" : 2
     }
 }

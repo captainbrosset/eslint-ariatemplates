@@ -9,7 +9,10 @@ module.exports = function(context) {
     function findDeclaredDependencies(node) {
         if (node.key.name === "$dependencies") {
             node.value.elements.forEach(function(dependency) {
-                declaredDependencies.push(dependency.value);
+                declaredDependencies.push({
+                    name : dependency.value,
+                    node : dependency
+                });
             });
         }
     }
@@ -18,8 +21,8 @@ module.exports = function(context) {
         var code = context.getSource();
         declaredDependencies.forEach(function(dependency) {
             // If the dependency appears 0 or 1 time, indexOf and lastIndexOf are going to be equal
-            if(code.indexOf(dependency) === code.lastIndexOf(dependency)) {
-                context.report(node, "Dependency {{dependency}} is not used.", { dependency: dependency });
+            if(code.indexOf(dependency.name) === code.lastIndexOf(dependency.name)) {
+                context.report(dependency.node, "Dependency {{dependency}} is not used.", { dependency: dependency.name });
             }
         });
     }
